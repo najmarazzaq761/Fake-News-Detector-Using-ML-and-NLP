@@ -17,10 +17,16 @@ model = pickle.load(open("fakenews_detection_model.pkl", "rb"))
 #load vectorizer
 vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
 
+with st.sidebar:
+     st.image("img.png", use_column_width =True)
+     st.markdown(""" ## 📰 Fake News Detector  
+                 
+This app analyzes news content and predicts whether it's **Real** or **Fake** using Natural Language Processing and Machine Learning.
+""")
 #App title 
-st.title("Fake News Detector")
-
-text = st.text_input("Enter your news here")
+st.title("📰 Fake News Detector")
+text = st.text_area("✍️ Your News", height=150)
+st.write("Enter a news below and click **Predict** to it's real or fake.")
 
 # defining function to clean input news
 def data_cleaning(text):
@@ -41,9 +47,11 @@ if text:
     X_tfidf = vectorizer.transform([cleaned_text])
 
 # predicting    
-if st.button("Predict"):
+if st.button("🔮 Predict"):
         prediction = model.predict(X_tfidf)
+        st.subheader("🧠 Prediction Result")
         if (prediction[0]==1):
-             st.write("Real News")
+             st.success("✅ Real News")
         else:
-             st.write("Fake News")
+             st.error("❌ Fake News")
+
