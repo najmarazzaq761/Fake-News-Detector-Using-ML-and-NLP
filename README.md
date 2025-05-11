@@ -1,7 +1,7 @@
 # 📰 Fake News Detection using Machine Learning
 
 
-https://github.com/user-attachments/assets/1296231f-7015-4b7f-ace9-47d03baa73b4
+https://github.com/user-attachments/assets/28f67317-c367-4c62-8647-893e56d6dae7
 
 
 This project is a **Fake News Detection System** that classifies news articles as **real or fake** using a trained **RandomForestClassifier**. It includes:
