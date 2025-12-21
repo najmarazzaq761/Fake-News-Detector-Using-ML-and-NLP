@@ -25,7 +25,7 @@ This app analyzes news content and predicts whether it's **Real** or **Fake** us
 """)
 #App title 
 st.title("📰 Fake News Detector")
-text = st.text_area("✍️ Your News", height=150)
+text = st.text_area("Your News", height=150)
 st.write("Enter a news below and click **Predict** to it's real or fake.")
 
 # defining function to clean input news
@@ -47,11 +47,11 @@ if text:
     X_tfidf = vectorizer.transform([cleaned_text])
 
 # predicting    
-if st.button("🔮 Predict"):
+if st.button("Predict"):
         prediction = model.predict(X_tfidf)
-        st.subheader("🧠 Prediction Result")
+        st.subheader("Prediction Result")
         if (prediction[0]==1):
-             st.success("✅ Real News")
+             st.success("Real News")
         else:
-             st.error("❌ Fake News")
+             st.error("Fake News")
 
