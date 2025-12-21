@@ -8,10 +8,6 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# Download necessary NLTK data
-nltk.download("punkt")
-nltk.download('stopwords')
-
 #Load model
 model = pickle.load(open("fakenews_detection_model.pkl", "rb"))
 #load vectorizer
@@ -41,17 +37,18 @@ def data_cleaning(text):
     tokens = [lemmatizer.lemmatize(token) for token in tokens if token not in stop_words and len(token) > 1]
     return " ".join(tokens)
 
-if text:
-    cleaned_text = data_cleaning(text)
-    # converting data into vectors
-    X_tfidf = vectorizer.transform([cleaned_text])
-
 # predicting    
 if st.button("Predict"):
+    if text:
+        cleaned_text = data_cleaning(text)
+        X_tfidf = vectorizer.transform([cleaned_text])
         prediction = model.predict(X_tfidf)
         st.subheader("Prediction Result")
         if (prediction[0]==1):
              st.success("Real News")
         else:
              st.error("Fake News")
+    else:
+        st.warning("Please enter some text")
+
 
