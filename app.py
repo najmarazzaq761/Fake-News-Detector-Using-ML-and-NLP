@@ -7,6 +7,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
+nltk.download('stopwords')
 
 #Load model
 model = pickle.load(open("fakenews_detection_model.pkl", "rb"))
