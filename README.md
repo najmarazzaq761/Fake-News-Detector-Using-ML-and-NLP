@@ -1,5 +1,7 @@
 # 📰 Fake News Detection using Machine Learning
 
+# Try live at this link :
+https://fakenewsdetector-gvd6h4g5crege9d8.centralindia-01.azurewebsites.net/
 
 https://github.com/user-attachments/assets/28f67317-c367-4c62-8647-893e56d6dae7
 
