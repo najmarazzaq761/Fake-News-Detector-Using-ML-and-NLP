@@ -27,7 +27,7 @@ model = pickle.load(open("fakenews_detection_model.pkl", "rb"))
 vectorizer = pickle.load(open("vectorizer.pkl", "rb"))
 
 with st.sidebar:
-     # st.image("img.png", use_container_width =True)
+     st.image("img.png", use_container_width =True)
      st.markdown(""" ## 📰 Fake News Detector  
                  
 This app analyzes news content and predicts whether it's **Real** or **Fake** using Natural Language Processing and Machine Learning.
