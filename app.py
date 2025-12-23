@@ -13,7 +13,8 @@ NLTK_PATH = "/home/site/wwwroot/nltk_data"
 os.makedirs(NLTK_PATH, exist_ok=True)
 nltk.data.path.append(NLTK_PATH)
 
-for resource in ["stopwords", "punkt", "punkt_tab"]:
+for resource in ["stopwords", "punkt", "punkt_tab","wordnet",
+    "omw-1.4"]:
     try:
         nltk.data.find(resource if "/" in resource else f"corpora/{resource}")
     except LookupError:
