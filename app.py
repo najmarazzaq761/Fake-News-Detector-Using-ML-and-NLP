@@ -7,7 +7,18 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
-nltk.download('stopwords')
+import os
+
+NLTK_PATH = "/home/site/wwwroot/nltk_data"
+os.makedirs(NLTK_PATH, exist_ok=True)
+nltk.data.path.append(NLTK_PATH)
+
+for resource in ["stopwords", "punkt", "punkt_tab"]:
+    try:
+        nltk.data.find(resource if "/" in resource else f"corpora/{resource}")
+    except LookupError:
+        nltk.download(resource, download_dir=NLTK_PATH)
+
 
 #Load model
 model = pickle.load(open("fakenews_detection_model.pkl", "rb"))
