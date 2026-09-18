@@ -117,7 +117,7 @@ BSCS Student | Data Scientist | [LinkedIn](https://www.linkedin.com/in/najmarazz
 
 ---
 
-## 📌 License
+## License
 
 This project is licensed under the MIT License.
 
