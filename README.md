@@ -1,4 +1,4 @@
-# 📰 Fake News Detection using Machine Learning
+# Fake News Detection using Machine Learning
 
 # Try live at this link :
 https://fakenewsdetector-gvd6h4g5crege9d8.centralindia-01.azurewebsites.net/
@@ -12,7 +12,7 @@ This project is a **Fake News Detection System** that classifies news articles a
 - A trained model (`fakenews_detection_model.pkl`)
 - A TF-IDF vectorizer (`vectorizer.pkl`)
 
-## 💡 Project Overview
+## Project Overview
 
 In today’s digital era, misinformation spreads fast and wide. This Fake News Detector helps identify whether a given news article is trustworthy or fabricated using natural language processing and machine learning.
 
@@ -20,10 +20,10 @@ The core idea is to allow users to input any news text and instantly know whethe
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-📦 Fake-News-Detection/
+Fake-News-Detection/
 ├── FakeNewsDetection.ipynb        # Jupyter notebook for EDA, preprocessing, model training
 ├── app.py                         # Streamlit app code
 ├── fakenews_detection_model.pkl   # Trained RandomForest model
@@ -34,9 +34,9 @@ The core idea is to allow users to input any news text and instantly know whethe
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
-### 🔧 Installation
+### Installation
 
 ```bash
 git clone https://github.com/najmarazzaq761/Fake-News-Detector-Using-ML.git
@@ -44,7 +44,7 @@ cd Fake-News-Detector-Using-ML
 pip install -r requirements.txt
 ```
 
-### ▶️ Launch the App
+### Launch the App
 
 ```bash
 streamlit run app.py
@@ -54,7 +54,7 @@ You will see a text input box where you can paste a news article. Hit the **Pred
 
 ---
 
-## 🛠 Features
+## Features
 
 - TF-IDF based feature extraction
 - Stopwords removal, lemmatization, and text cleaning
@@ -63,7 +63,7 @@ You will see a text input box where you can paste a news article. Hit the **Pred
 
 ---
 
-## 🧠 Model Details
+## Model Details
 
 - **Algorithm Used**: RandomForestClassifier
 - **Vectorization**: TF-IDF (`max_features=5000`)
@@ -71,7 +71,7 @@ You will see a text input box where you can paste a news article. Hit the **Pred
 
 ---
 
-## 📊 Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA)
 
 The notebook includes:
 - Word clouds for fake vs real news
@@ -81,7 +81,7 @@ The notebook includes:
 
 ---
 
-## 🖼️ Streamlit App UI
+## Streamlit App UI
 
 - User inputs news content in a text field
 - Behind the scenes, the app cleans and vectorizes the input
@@ -90,7 +90,7 @@ The notebook includes:
 
 ---
 
-## 📚 Requirements
+## Requirements
 
 ```
 streamlit
@@ -110,7 +110,7 @@ pip install -r requirements.txt
 
 ---
 
-## ✍️ Author
+## Author
 
 **Najma Razzaq**  
 BSCS Student | Data Scientist | [LinkedIn](https://www.linkedin.com/in/najmarazzaq)
