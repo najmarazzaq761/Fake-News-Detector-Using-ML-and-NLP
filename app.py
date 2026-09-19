@@ -8,18 +8,18 @@ from nltk.tokenize import word_tokenize
 from nltk.stem import WordNetLemmatizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 import os
+import nltk
 
-NLTK_PATH = "/home/site/wwwroot/nltk_data"
+NLTK_PATH = "/tmp/nltk_data"
+
 os.makedirs(NLTK_PATH, exist_ok=True)
 nltk.data.path.append(NLTK_PATH)
 
-for resource in ["stopwords", "punkt", "punkt_tab","wordnet",
-    "omw-1.4"]:
+for resource in ["stopwords", "punkt", "punkt_tab", "wordnet"]:
     try:
-        nltk.data.find(resource if "/" in resource else f"corpora/{resource}")
-    except LookupError:
         nltk.download(resource, download_dir=NLTK_PATH)
-
+    except Exception as e:
+        print(f"Error downloading {resource}: {e}")
 
 #Load model
 model = pickle.load(open("fakenews_detection_model.pkl", "rb"))
